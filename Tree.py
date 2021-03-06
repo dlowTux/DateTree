@@ -53,7 +53,12 @@ class Tree:
                 return objetive
             if len(objetive)==0:
                 return True
-
+def Convert(number):
+    try:
+        int(number)
+        return True
+    except:
+        return False
 def HasBars(data):
     num_bars=0
     for  x in data:
@@ -61,7 +66,10 @@ def HasBars(data):
             num_bars+=1
     return num_bars==2
 def IsNotFake(data):
-    if int(data[0:2])>29 and int(data[0:2])<31 and int(data[3:5])==2:
+    if Convert(data[0:2]) ==True and  Convert(data[0:2]) ==True and  Convert(data[3:5])==True:
+        if int(data[0:2])>29 and int(data[0:2])<31 and int(data[3:5])==2:
+            return False
+    else:
         return False
     return True
 
