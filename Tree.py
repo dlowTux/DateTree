@@ -112,7 +112,7 @@ tokens=[
 for x in range(len(datas)):
     thunk.root=thunk.insert(thunk.root,datas[x],tokens[x])
 
-date=input()
+date=input('Write a date ')
 
 if is_not_blank(date):
     result=thunk.PostOrder(
